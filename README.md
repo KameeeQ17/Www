@@ -1,6 +1,33 @@
 # WildLands.pl
 
-Statyczna strona HTML, wdrażana przez istniejące połączenie GitHub → Vercel. Nie wymaga instalowania pakietów ani zmiany ustawień projektu Vercel.
+## Panel administratora
+
+Adres: https://www.wildlands.pl/admin
+
+Panel pozwala dodawać i edytować aktualności, ustawić datę oraz podejrzeć treść. Po „Zapisz i opublikuj” serwer zapisuje aktualności w repozytorium i uruchamia istniejące wdrożenie Vercel. Hasło i token nigdy nie trafiają do plików strony. Sesja trwa 2 godziny; zmiana hasła unieważnia dotychczasowe sesje po wdrożeniu nowych ustawień.
+
+### Jednorazowa aktywacja przez właściciela
+
+1. W [ustawieniach tokenów GitHub](https://github.com/settings/personal-access-tokens/new) utwórz fine-grained personal access token. Właściciel zasobu: `KameeeQ17`, wybrane repozytorium: tylko `Www`, uprawnienie `Contents: Read and write`. Pozostałe uprawnienia pozostaw bez zmian. Ustaw termin ważności i odnów token przed jego wygaśnięciem.
+2. W [ustawieniach projektu Vercel](https://vercel.com/wild-b894/www/settings/environment-variables) dodaj dla środowiska **Production**:
+   - `ADMIN_PASSWORD` — własne unikalne hasło minimum 20 znaków (najlepiej wygenerowane przez menedżer haseł).
+   - `GITHUB_TOKEN` — token utworzony w kroku 1.
+3. W Vercel wybierz **Deployments → najnowsze wdrożenie → Redeploy**. Zmienne zaczną działać po nowym wdrożeniu.
+4. Otwórz `/admin`, zaloguj się swoim hasłem i dodaj pierwszy wpis. Nie przesyłaj hasła ani tokenu w rozmowie.
+
+Bez konfiguracji panel i zapis pozostają zablokowane. Repozytorium musi nadal pozwalać tokenowi na zapis do `main`. Publiczne aktualności są nadal serwowane statycznie z ostatniego wdrożenia.
+
+### Zabezpieczenia i zachowanie
+
+- Podpisana sesja w ciasteczku Secure, HttpOnly, SameSite=Strict, wygasająca po 2 godzinach.
+- Kontrola pochodzenia żądań do zapisu i logowania: tylko `https://wildlands.pl` i `https://www.wildlands.pl`.
+- Limit prób logowania jest lokalny dla instancji funkcji; dla globalnego limitowania można skonfigurować regułę rate limiting w Vercel Firewall.
+- Walidacja po stronie serwera i kontrola wersji pliku chronią przed nadpisaniem równoległej edycji. Przy konflikcie skopiuj niezapisany tekst, odśwież listę i ponów zmianę.
+- Nie ma usuwania wpisów w panelu. Edycja i dodawanie to podstawowy zakres panelu.
+- Token wygasły, cofnięty albo bez praw do zapisu powoduje komunikat błędu; niezapisany tekst pozostaje w otwartej karcie. Hasło i token przechowuje wyłącznie Vercel.
+- Po zapisie publiczna strona zmieni się dopiero po udanym wdrożeniu Vercel. Komunikat w panelu potwierdza zapis i rozpoczęcie publikacji, nie jej zakończenie.
+
+Strona HTML z funkcją serwerową `/api/admin`, wdrażana przez istniejące połączenie GitHub → Vercel. Nie wymaga instalowania pakietów.
 
 ## Dodawanie aktualności w GitHub
 
