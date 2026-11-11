@@ -1,6 +1,6 @@
 name: WildLandsRecent
-version: 1.0.0
+version: 2.0.0
 main: pl.wildlands.recent.WildLandsRecent
 api-version: '1.16'
-description: Publikuje piec ostatnich wejsc dla strony WildLands.pl
+description: Wysyla piec ostatnich wejsc z lobby przez HTTPS bez otwierania portow
 author: WildLands

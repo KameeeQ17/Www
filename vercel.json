@@ -1,4 +1,5 @@
 {
+  "git": { "deploymentEnabled": { "wildlands-player-data": false } },
   "rewrites": [{ "source": "/admin", "destination": "/admin.html" }],
   "headers": [
     {

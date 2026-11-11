@@ -2,7 +2,7 @@
 
 ## Ostatnio dołączający gracze
 
-Strona główna pobiera historię przez `/api/recent`. Potrzebna jest wtyczka `WildLandsRecent` i dodatkowy port HTTP w hostingu serwera. Instrukcja i źródło: `minecraft-plugin/README.md`. Zmienna Vercel: `MINECRAFT_RECENT_URL`. Bez niej strona pokazuje informację o oczekiwaniu na połączenie, bez fikcyjnych graczy. Licznik online nadal działa niezależnie. Główki pobierane są z mc-heads.net po UUID; dane odświeżane są co minutę.
+Strona główna pobiera historię przez `/api/recent`. Wtyczka `WildLandsRecent` 2.0 na lobby Paper wysyła dane przez HTTPS, bez dodatkowego portu. Instrukcja i źródło: `minecraft-plugin/README.md`. Vercel wymaga `RECENT_PLAYERS_SECRET` zgodnego z config.yml wtyczki i dotychczasowego `GITHUB_TOKEN`. Dane są trwale zapisywane na osobnej gałęzi `wildlands-player-data`, bez wdrażania strony przy zmianie danych. `MINECRAFT_RECENT_URL` z wersji 1 nie jest już używane. Bez konfiguracji strona pokazuje informację o oczekiwaniu na połączenie, bez fikcyjnych graczy. Licznik online nadal działa niezależnie. Główki pobierane są z mc-heads.net po UUID; dane odświeżane są co minutę.
 
 ## Panel administratora
 

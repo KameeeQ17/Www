@@ -1,3 +1,4 @@
-# Ustaw DODATKOWY port przydzielony przez hosting, inny niz port gry.
-port: 8085
-bind-address: '0.0.0.0'
+# Ten sam klucz ustaw w Vercel jako RECENT_PLAYERS_SECRET (minimum 32 znaki).
+# Gotowy prywatny config.yml jest w paczce do pobrania, poza repozytorium.
+secret: 'WPISZ-TUTAJ-WLASNY-LOSOWY-KLUCZ-MINIMUM-32-ZNAKI'
+endpoint: 'https://www.wildlands.pl/api/recent'
