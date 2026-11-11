@@ -1,5 +1,9 @@
 # WildLands.pl
 
+## Ostatnio dołączający gracze
+
+Strona główna pobiera historię przez `/api/recent`. Potrzebna jest wtyczka `WildLandsRecent` i dodatkowy port HTTP w hostingu serwera. Instrukcja i źródło: `minecraft-plugin/README.md`. Zmienna Vercel: `MINECRAFT_RECENT_URL`. Bez niej strona pokazuje informację o oczekiwaniu na połączenie, bez fikcyjnych graczy. Licznik online nadal działa niezależnie. Główki pobierane są z mc-heads.net po UUID; dane odświeżane są co minutę.
+
 ## Panel administratora
 
 Adres: https://www.wildlands.pl/admin

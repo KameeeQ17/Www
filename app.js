@@ -1,10 +1,10 @@
 async function copyIP(button) {
   try {
     await navigator.clipboard.writeText('WildLands.pl');
-    const old = button.textContent;
+    const old = [...button.childNodes].map(node => node.cloneNode(true));
     button.textContent = '✓ Skopiowano IP!';
     button.disabled = true;
-    setTimeout(() => { button.textContent = old; button.disabled = false; }, 2000);
+    setTimeout(() => { button.replaceChildren(...old); button.disabled = false; }, 2000);
   } catch { window.prompt('Skopiuj adres serwera:', 'WildLands.pl'); }
 }
 document.querySelectorAll('#copy,#copy2').forEach(b => b.addEventListener('click', () => copyIP(b)));
@@ -24,10 +24,12 @@ async function updateStatus() {
       ? `Serwer online • Gracze online: ${Number.isInteger(count) && count >= 0 ? count : 'brak danych'}${Number.isInteger(data.players?.max) ? ' / ' + data.players.max : ''}`
       : 'Serwer offline według ostatniego odczytu';
     dot.classList.toggle('on', data.online);
+    document.querySelectorAll('[data-live-status]').forEach(el => { el.textContent = data.online ? `${Number.isInteger(count) && count >= 0 ? count : '—'} online` : 'Serwer offline'; el.classList.toggle('is-online', data.online); });
     document.getElementById('status-note').textContent = 'Odczyt: ' + new Date().toLocaleTimeString('pl-PL') + ' • odświeżanie co 60 s • dane mogą być buforowane';
   } catch {
     dot.classList.remove('on');
     label.textContent = 'Liczba graczy chwilowo niedostępna';
+    document.querySelectorAll('[data-live-status]').forEach(el => { el.textContent = 'Status niedostępny'; el.classList.remove('is-online'); });
     document.getElementById('status-note').textContent = 'Nie udało się pobrać statusu • ponowna próba za 60 s';
   } finally { checking = false; }
 }

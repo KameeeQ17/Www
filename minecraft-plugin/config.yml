@@ -1,0 +1,3 @@
+# Ustaw DODATKOWY port przydzielony przez hosting, inny niz port gry.
+port: 8085
+bind-address: '0.0.0.0'
