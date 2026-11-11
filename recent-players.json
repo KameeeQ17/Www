@@ -1,3 +1,9 @@
 {
-  "players": []
+  "players": [
+    {
+      "name": "Kamee_Q",
+      "uuid": "3388498f-87f8-354f-8bab-b260747bf538",
+      "joinedAt": "2026-11-11T10:23:58.027Z"
+    }
+  ]
 }
