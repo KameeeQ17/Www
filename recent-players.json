@@ -1,6 +1,11 @@
 {
   "players": [
     {
+      "name": "kacperek2025",
+      "uuid": "eb519ae3-7913-39a6-9983-86a50b73d192",
+      "joinedAt": "2026-11-12T19:48:50.197Z"
+    },
+    {
       "name": "AkKacperek",
       "uuid": "bef9066f-edcc-3103-8b8c-b66d9ac05718",
       "joinedAt": "2026-11-12T19:28:10.660Z"
@@ -19,11 +24,6 @@
       "name": "ResTr0",
       "uuid": "fce0bdfd-6bb4-349f-aeb2-9b872a533473",
       "joinedAt": "2026-11-12T18:26:22.052Z"
-    },
-    {
-      "name": "AKMiki",
-      "uuid": "ea20d281-08ce-3dfc-8c34-4a7f7b07c14c",
-      "joinedAt": "2026-11-12T16:38:33.608Z"
     }
   ]
 }
