@@ -1,6 +1,11 @@
 {
   "players": [
     {
+      "name": "ZuzuQueen",
+      "uuid": "4e90b120-6a19-3f6e-93ba-27210b11f3cd",
+      "joinedAt": "2026-11-12T10:51:32.632Z"
+    },
+    {
       "name": "kacperek2025",
       "uuid": "eb519ae3-7913-39a6-9983-86a50b73d192",
       "joinedAt": "2026-11-12T10:31:07.690Z"
@@ -19,11 +24,6 @@
       "name": "JastrzPL",
       "uuid": "4dc02224-0e90-30ea-98a9-4b62b2c19d2c",
       "joinedAt": "2026-11-12T07:39:45.512Z"
-    },
-    {
-      "name": "Pentaxvenox",
-      "uuid": "51b6cbc4-61f6-3661-b72c-e63f69870327",
-      "joinedAt": "2026-11-11T23:45:39.132Z"
     }
   ]
 }
