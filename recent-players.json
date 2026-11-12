@@ -1,6 +1,11 @@
 {
   "players": [
     {
+      "name": "ResTr0",
+      "uuid": "fce0bdfd-6bb4-349f-aeb2-9b872a533473",
+      "joinedAt": "2026-11-12T18:26:22.052Z"
+    },
+    {
       "name": "Kamee_Q",
       "uuid": "3388498f-87f8-354f-8bab-b260747bf538",
       "joinedAt": "2026-11-12T17:47:17.590Z"
@@ -19,11 +24,6 @@
       "name": "Sebawedkarz2017",
       "uuid": "e06dc59c-186a-38d2-8d6e-4a4c123687e3",
       "joinedAt": "2026-11-12T15:29:56.601Z"
-    },
-    {
-      "name": "Pentaxvenox",
-      "uuid": "51b6cbc4-61f6-3661-b72c-e63f69870327",
-      "joinedAt": "2026-11-12T14:47:32.270Z"
     }
   ]
 }
