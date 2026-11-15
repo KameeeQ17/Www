@@ -1,6 +1,11 @@
 {
   "players": [
     {
+      "name": "Bluerr",
+      "uuid": "b19743ad-ef9d-3343-9d1e-a17a066bc89a",
+      "joinedAt": "2026-11-15T21:00:59.748Z"
+    },
+    {
       "name": "kacperek2025",
       "uuid": "eb519ae3-7913-39a6-9983-86a50b73d192",
       "joinedAt": "2026-11-15T20:21:58.486Z"
@@ -19,11 +24,6 @@
       "name": "Migrika",
       "uuid": "58fa8902-c539-3802-855a-e2f672fa934d",
       "joinedAt": "2026-11-15T15:05:45.801Z"
-    },
-    {
-      "name": "Kamee_Q",
-      "uuid": "3388498f-87f8-354f-8bab-b260747bf538",
-      "joinedAt": "2026-11-15T14:48:48.510Z"
     }
   ]
 }
